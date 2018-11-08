@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 
-const URL = 'https://api.spreaker.com/v2/shows/2088171/episodes';
+const URL = 'https://api.spreaker.com/v2/shows/2088171/episodes?limit=100';
 
 class List extends Component {
   state = {
@@ -28,13 +28,18 @@ class List extends Component {
   displayEpisodes = (episodes) => {
     return (
       <div>
-        <p>It's supposedly loaded.{console.log(this.state.data)}</p>
+        <p>It's supposedly loaded.</p>
+        <ul>
+          {episodes.map((episode) => (
+            <li>{episode.title}</li>
+          ))}
+        </ul>
       </div>
     );
   };
 
   render() {
-    return !this.state.data
+    return !this.state.data.length > 0
       ? this.displayLoading()
       : this.displayEpisodes(this.state.data);
   }
