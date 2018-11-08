@@ -1,0 +1,7 @@
+.container {
+  width: 100em;
+  margin: 6rem auto 0 auto;
+  border-width: 2px;
+  border-color: #000000;
+  border-style: solid;
+}
