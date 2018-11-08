@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ListItem = (props) => {
+const Episode = (props) => {
   return (
     <div className="listItem">
-      <p>Example</p>
+      <p>{props.details.title}</p>
     </div>
   );
 };
 
-export default ListItem;
+export default Episode;

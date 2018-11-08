@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import Episode from './Episode';
 
 const URL = 'https://api.spreaker.com/v2/shows/2088171/episodes?limit=100';
 
@@ -30,8 +31,9 @@ class List extends Component {
       <div>
         <p>It's supposedly loaded.</p>
         <ul>
+          {console.log(episodes)}
           {episodes.map((episode) => (
-            <li>{episode.title}</li>
+            <Episode details={episode} />
           ))}
         </ul>
       </div>
