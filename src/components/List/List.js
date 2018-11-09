@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import moment from 'moment';
 import Axios from 'axios';
 import Episode from './Episode';
 
@@ -13,8 +14,20 @@ class List extends Component {
 
   componentDidMount = async () => {
     let { data } = await Axios.get(URL);
+
+    let formattedData = data.response.items.map((episode) => {
+      episode.formatted_date = moment(episode.published_at).format(
+        'Do MMMM YYYY'
+      );
+      episode.formatted_duration = moment
+        .duration(episode.duration, 'milliseconds')
+        .asMinutes()
+        .toFixed(0);
+      return { ...episode };
+    });
+
     this.setState({
-      data: data.response.items
+      data: formattedData
     });
   };
 
@@ -29,7 +42,7 @@ class List extends Component {
   displayEpisodes = (episodes) => {
     return (
       <div>
-        <p>It's supposedly loaded.</p>
+        <p>It's supposedly loaded.{console.log(this.state.data)}</p>
         <ul>
           {console.log(episodes)}
           {episodes.map((episode) => (
