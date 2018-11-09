@@ -9,7 +9,6 @@ const URL =
 class List extends Component {
   state = {
     data: {},
-    activeSelection: {},
     hasError: false
   };
 
@@ -43,11 +42,14 @@ class List extends Component {
   displayEpisodes = (episodes) => {
     return (
       <div>
-        <p>It's supposedly loaded.{console.log(this.state.data)}</p>
+        <p>It's supposedly loaded.</p>
         <ul>
-          {console.log(episodes)}
           {episodes.map((episode) => (
-            <Episode details={episode} />
+            <Episode
+              details={episode}
+              key={episode.episode_id}
+              selectActiveEpisode={this.props.selectActiveEpisode}
+            />
           ))}
         </ul>
       </div>
