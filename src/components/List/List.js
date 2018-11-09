@@ -3,7 +3,8 @@ import moment from 'moment';
 import Axios from 'axios';
 import Episode from './Episode';
 
-const URL = 'https://api.spreaker.com/v2/shows/2088171/episodes?limit=100';
+const URL =
+  'https://cors.io/?https://api.spreaker.com/v2/shows/2088171/episodes?limit=100';
 
 class List extends Component {
   state = {
