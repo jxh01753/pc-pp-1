@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 
 class Player extends Component {
+
+  state = {
+    newEpisode: false
+  }
+
   render() {
-    return !this.props.episodeName ? this.preloadStatus() : this.loadPlayer();
+    return this.loadPlayer();
   }
 
   preloadStatus = () => {
