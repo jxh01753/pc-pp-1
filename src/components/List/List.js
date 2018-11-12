@@ -13,7 +13,7 @@ class List extends Component {
   displayEpisodes = (episodes) => {
     return (
       <div>
-        <p>It's supposedly loaded.</p>
+        <p>Episodes</p>
         <ul>
           {episodes.map((episode) => (
             <Episode
