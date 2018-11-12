@@ -13,8 +13,8 @@ class Player extends Component {
     ) : (
       <ReactPlayer
         url={`https://api.spreaker.com/download/episode/${
-          this.state.episodeNo
-        }/${this.state.episodeName}.mp3`}
+          this.props.activeEpisode
+        }/${this.props.episodeName}.mp3`}
         config={{
           file: {
             forceAudio: true
