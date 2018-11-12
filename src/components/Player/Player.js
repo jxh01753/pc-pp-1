@@ -31,7 +31,7 @@ class Player extends Component {
   loadingScreen = () => {
     return (
       <div>
-        <p>Loading..</p>
+        <p>Select an episode below to load the player.</p>
       </div>
     );
   };
