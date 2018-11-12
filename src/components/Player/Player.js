@@ -2,20 +2,49 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 
 class Player extends Component {
+  state = {
+    episodeNo: '',
+    episodeName: ''
+  };
+
   render() {
-    return (
+    return !this.props.activeEpisode ? (
+      this.loadingScreen()
+    ) : (
       <ReactPlayer
-        url="https://api.spreaker.com/download/episode/16060712/candy_corn_sucks.mp3"
+        url={`https://api.spreaker.com/download/episode/${
+          this.props.activeEpisode
+        }/${this.props.episodeName}.mp3`}
         config={{
           file: {
             forceAudio: true
           }
         }}
-        playing="true"
-        controls="true"
+        playing
+        controls={true}
+        width="100%"
+        height="100%"
       />
     );
   }
+
+  loadingScreen = () => {
+    return (
+      <div>
+        <p>Select an episode below to load the player.</p>
+      </div>
+    );
+  };
+
+  componentDidMount = () => {
+    if (!this.props.activeEpisode) {
+    } else {
+      this.setState({
+        episodeNo: this.props.activeEpisode,
+        episodeName: this.props.episodeName
+      });
+    }
+  };
 }
 
 export default Player;
