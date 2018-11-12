@@ -4,6 +4,7 @@ import moment from 'moment';
 import './styles/layout.css';
 import List from './components/List/List';
 import Player from './components/Player/Player';
+import PlayerInfo from './components/Player/PlayerInfo';
 
 const URL =
   'https://cors.io/?https://api.spreaker.com/v2/shows/2088171/episodes?limit=100';
@@ -42,6 +43,7 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div>
+            <PlayerInfo />
             <Player
               activeEpisode={this.state.activeEpisode.episode_id}
               episodeName={this.state.episodeName}
