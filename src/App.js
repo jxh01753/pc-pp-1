@@ -13,8 +13,7 @@ class App extends Component {
   state = {
     activeEpisode: {},
     episodeName: '',
-    firstEpisode: {},
-    firstEpisodeName: '',
+    description: '',
     data: {}
   };
 
@@ -43,12 +42,13 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div>
-            <PlayerInfo />
+            <PlayerInfo
+              activeEpisode={this.state.activeEpisode}
+              description={this.state.description}
+            />
             <Player
               activeEpisode={this.state.activeEpisode.episode_id}
               episodeName={this.state.episodeName}
-              firstEpisode={this.state.firstEpisode}
-              firstEpisodeName={this.state.firstEpisodeName}
             />
             <List
               data={this.state.data}
@@ -60,19 +60,17 @@ class App extends Component {
     );
   }
 
-  getFirstEpisode = (firstEpisode) => {
-    let formatAudio = this.formatMP3URL(firstEpisode);
-    this.setState({
-      firstEpisode,
-      episodeName: formatAudio
-    });
-  };
-
-  selectActiveEpisode = (selectedEpisode) => {
+  selectActiveEpisode = async (selectedEpisode) => {
     let formattedAudio = this.formatMP3URL(selectedEpisode);
+    let description = await Axios.get(
+      `https://cors.io/?https://api.spreaker.com/v2/episodes/${
+        selectedEpisode.episode_id
+      }`
+    );
     this.setState({
       activeEpisode: selectedEpisode,
-      episodeName: formattedAudio
+      episodeName: formattedAudio,
+      description: description.data.response.episode.description
     });
   };
 
