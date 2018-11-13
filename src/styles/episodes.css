@@ -18,6 +18,7 @@
 .listItem:hover {
   background-color: #001122;
   opacity: 1;
+  cursor: pointer;
 }
 
 .list-title,
