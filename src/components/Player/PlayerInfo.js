@@ -2,7 +2,7 @@ import React from 'react';
 
 const PlayerInfo = (props) => {
   return props.activeEpisode.title ? (
-    <div>
+    <div className="podcast-info">
       <img
         className="pod-picture"
         src={props.activeEpisode.image_url}

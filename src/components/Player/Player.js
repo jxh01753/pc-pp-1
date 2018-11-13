@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
+import '../../styles/player.css';
 
 class Player extends Component {
   state = {
@@ -11,20 +12,22 @@ class Player extends Component {
     return !this.props.activeEpisode ? (
       this.loadingScreen()
     ) : (
-      <ReactPlayer
-        url={`https://api.spreaker.com/download/episode/${
-          this.props.activeEpisode
-        }/${this.props.episodeName}.mp3`}
-        config={{
-          file: {
-            forceAudio: true
-          }
-        }}
-        playing
-        controls
-        width="100%"
-        height="100%"
-      />
+      <div className="react-player-section">
+        <ReactPlayer
+          url={`https://api.spreaker.com/download/episode/${
+            this.props.activeEpisode
+          }/${this.props.episodeName}.mp3`}
+          config={{
+            file: {
+              forceAudio: true
+            }
+          }}
+          playing
+          controls
+          width="100%"
+          height="100%"
+        />
+      </div>
     );
   }
 
