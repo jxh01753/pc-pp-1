@@ -4,7 +4,7 @@ This is a basic react-based podcast player. It currently works for the podcast [
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. A live deployment is available here - [https://quizzical-almeida-d7ab56.netlify.com/](https://quizzical-almeida-d7ab56.netlify.com/)
 
 ### Prerequisites
 
