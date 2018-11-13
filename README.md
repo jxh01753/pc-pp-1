@@ -19,6 +19,10 @@ podcast-player has the following dependencies -
 
 You can install these dependencies after cloning down the repo using `npm i` or installing them manually. After that, you can start it up using `npm start`.
 
+### Notes
+
+You may need to disable your tracker blocker (like [Privacy Badger](https://www.eff.org/privacybadger/) etc) as this might affect the api call.
+
 ## Authors
 
 **John Harrington** - [jxh01753](https://github.com/jxh01753)
