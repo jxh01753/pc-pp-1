@@ -21,7 +21,7 @@ You can install these dependencies after cloning down the repo using `npm i` or 
 
 ### Notes
 
-You may need to disable your tracker blocker (like [Privacy Badger](https://www.eff.org/privacybadger/) etc) as this might affect the api call.
+You may need to disable your tracker blocker (like [Privacy Badger](https://www.eff.org/privacybadger/) or disconnect/ghostery/ublock origin etc) as this might affect the api call.
 
 ## Authors
 
