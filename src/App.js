@@ -42,14 +42,18 @@ class App extends Component {
       <div className="App">
         <div className="container">
           <div>
-            <PlayerInfo
-              activeEpisode={this.state.activeEpisode}
-              description={this.state.description}
-            />
-            <Player
-              activeEpisode={this.state.activeEpisode.episode_id}
-              episodeName={this.state.episodeName}
-            />
+            <div className="player-info">
+              <PlayerInfo
+                activeEpisode={this.state.activeEpisode}
+                description={this.state.description}
+              />
+            </div>
+            <div className="player-container">
+              <Player
+                activeEpisode={this.state.activeEpisode.episode_id}
+                episodeName={this.state.episodeName}
+              />
+            </div>
             <List
               data={this.state.data}
               selectActiveEpisode={this.selectActiveEpisode}

@@ -5,7 +5,7 @@ class List extends Component {
   displayLoading = () => {
     return (
       <div>
-        <p>It's loading mate.</p>
+        <p className="loading-message">Retrieving podcast list.</p>
       </div>
     );
   };
@@ -13,7 +13,7 @@ class List extends Component {
   displayEpisodes = (episodes) => {
     return (
       <div>
-        <p>Episodes</p>
+        <p className="list-title">Episodes</p>
         <ul>
           {episodes.map((episode) => (
             <Episode

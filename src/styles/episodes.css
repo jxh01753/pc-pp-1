@@ -1,0 +1,25 @@
+.listItem {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #8badc1;
+  background-color: #000c1d;
+  padding: 0px 10px;
+  margin: 1rem auto 0 auto;
+  width: 81rem;
+  transition: 0.3s;
+}
+
+.episode-btn {
+  transition: 0.3s;
+}
+
+.listItem:hover,
+.episode-btn:hover {
+  background-color: #001122;
+}
+
+.list-title,
+.loading-message {
+  margin: 1rem auto 0 auto;
+  width: 80rem;
+}
