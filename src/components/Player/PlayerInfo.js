@@ -8,8 +8,10 @@ const PlayerInfo = (props) => {
         src={props.activeEpisode.image_url}
         alt={'Active Podcast Logo'}
       />
-      <h2>Current Episode: {props.activeEpisode.title}</h2>
-      <p>Description: {props.description}</p>
+      <h2 className="episode-title">
+        Current Episode: {props.activeEpisode.title}
+      </h2>
+      <p className="description-title">Description: {props.description}</p>
     </div>
   ) : (
     <React.Fragment />

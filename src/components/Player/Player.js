@@ -21,7 +21,7 @@ class Player extends Component {
           }
         }}
         playing
-        controls={true}
+        controls
         width="100%"
         height="100%"
       />
