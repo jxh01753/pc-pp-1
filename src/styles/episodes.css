@@ -12,11 +12,12 @@
 
 .episode-btn {
   transition: 0.3s;
+  background: none;
 }
 
-.listItem:hover,
-.episode-btn:hover {
+.listItem:hover {
   background-color: #001122;
+  opacity: 1;
 }
 
 .list-title,
