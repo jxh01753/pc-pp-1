@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Episode from './Episode';
 
-class List extends Component {
-  displayLoading = () => {
+const List = (props) => {
+  const displayLoading = () => {
     return (
       <div>
         <p className="loading-message">Retrieving podcast list.</p>
@@ -10,16 +10,16 @@ class List extends Component {
     );
   };
 
-  displayEpisodes = (episodes) => {
+  const displayEpisodes = (episodes) => {
     return (
       <div>
-        <p className="list-title">Episodes</p>
+        <h2 className="list-title">Episodes</h2>
         <ul>
           {episodes.map((episode) => (
             <Episode
               details={episode}
               key={episode.episode_id}
-              selectActiveEpisode={this.props.selectActiveEpisode}
+              selectActiveEpisode={props.selectActiveEpisode}
             />
           ))}
         </ul>
@@ -27,11 +27,9 @@ class List extends Component {
     );
   };
 
-  render() {
-    return !this.props.data.length > 0
-      ? this.displayLoading()
-      : this.displayEpisodes(this.props.data);
-  }
-}
+  return !props.data.length > 0
+    ? displayLoading()
+    : displayEpisodes(props.data);
+};
 
 export default List;
