@@ -17,7 +17,9 @@ podcast-player has the following dependencies -
 - `react-dom v16.6.1`; and
 - `react-scripts v2.1.1`.
 
-You can install these dependencies after cloning down the repo using `npm i` or installing them manually. After that, you can start it up using `npm start`.
+Clone down this repo, navigate to the directory in your terminal emulator of choice and use `npm i` to install the dependencies.
+
+After that, you can start up a local version of the app using `npm start`.
 
 ### Notes
 
