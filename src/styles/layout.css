@@ -1,7 +1,25 @@
+* {
+  background-color: #000c1d;
+}
+
+p,
+h1,
+h2 {
+  color: #8badc1;
+}
+
 .container {
-  width: 100em;
+  width: 100rem;
   margin: 6rem auto 0 auto;
-  border-width: 2px;
-  border-color: #000000;
-  border-style: solid;
+  background-color: #000c1d;
+}
+
+.player-info {
+  width: 80rem;
+  margin: 6rem auto 0 auto;
+}
+
+.player-container {
+  width: 80rem;
+  margin: 1rem auto 0 auto;
 }

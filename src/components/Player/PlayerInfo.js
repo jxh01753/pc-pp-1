@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PlayerInfo = (props) => {
-  return (
+  return props.activeEpisode.title ? (
     <div>
       <img
         className="pod-picture"
@@ -11,6 +11,8 @@ const PlayerInfo = (props) => {
       <h2>Current Episode: {props.activeEpisode.title}</h2>
       <p>Description: {props.description}</p>
     </div>
+  ) : (
+    <React.Fragment />
   );
 };
 
