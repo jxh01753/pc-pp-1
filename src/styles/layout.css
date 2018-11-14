@@ -22,4 +22,5 @@ h2 {
 .player-container {
   width: 80rem;
   margin: 1rem auto 0 auto;
+  height: 50px;
 }
