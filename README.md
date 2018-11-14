@@ -31,5 +31,5 @@ You may need to disable your tracker blocker (like [Privacy Badger](https://www.
 
 ## Acknowledgments
 
-- [Sarah Drasner](https://twitter.com/sarah_edo) for the colour scheme ["Night Owl"](https://marketplace.visualstudio.com/items?itemName=sdras.night-owl) used in this app.
+- [Sarah Drasner](https://twitter.com/sarah_edo) for the colour scheme ["Night Owl"](https://github.com/sdras/night-owl-vscode-theme) used in this app.
 - [Pete Cook](https://github.com/CookPete/react-player) for the creation of `react-player`.
